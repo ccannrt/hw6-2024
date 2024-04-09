@@ -18,7 +18,6 @@ window.addEventListener("load", function() {
 
 play.addEventListener("click", function() {
 	video.play();
-	video.volume = 0.2;
 	volume_value.innerHTML = (video.volume * 100) + "%";
 	volume_slider.value = (video.volume * 100);
 	console.log(video.volume);
