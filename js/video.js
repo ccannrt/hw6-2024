@@ -19,6 +19,7 @@ window.addEventListener("load", function() {
 play.addEventListener("click", function() {
 	video.play();
 	video.volume = 0.2;
+	volume_value.innerHTML = (video.volume * 100) + "%";
 	console.log(video.volume);
 });
 
@@ -64,8 +65,8 @@ mute.addEventListener("click", function() {
 })
 
 volume_slider.addEventListener("input", function() {
-	video.volume = (volume_slider.value) / 100;
-	volume_value.innerHTML = volume_slider.value;
+	video.volume = (volume_slider.value / 100);
+	volume_value.innerHTML = volume_slider.value + "%";
 })
 
 old_school.addEventListener("click", function() {
